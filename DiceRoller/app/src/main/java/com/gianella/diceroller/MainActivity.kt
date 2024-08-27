@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -27,6 +28,7 @@ import com.gianella.diceroller.ui.theme.DiceRollerTheme
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.unit.sp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,7 +80,7 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier
             modifier = Modifier.height(24.dp)
         )
         Button(onClick = { result = (1..6).random() }) {
-            Text(stringResource(R.string.roll))
+            Text(text = stringResource(R.string.roll), fontSize = 24.sp)
         }
     }
 }
